@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figuras Geométricas</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="../assets/figuras.js" defer></script>
+</head>
+
+<body>
+    <div class="container m-auto mt-4 text-center">
+        <h1 class="text-2xl font-bold text-indigo-900">Taller del Curso Práctico de JavaScript</h1>
+        <h2 class="text-lg font-bold text-gray-700">Calcular Áreas de Figuras geométricas</h2>
+        <div class="flex gap-4 mt-4 justify-center">
+            <!-- calcular el área de un cuadrado -->
+            <div class="bg-gray-200 rounded-md p-4 shadow-2xl border border-gray-300 text-center">
+                <h2 class="text-md font-bold text-gray-700">Calcular Área del Cuadrado</h2>
+                <i class="text-2xl text-gray-700 fas fa-square"></i>
+
+                <form action="#" id="formCuadrado" onsubmit="calcularAreaCuadrado()">
+                    <div class="space-y-2 mt-4">
+                        <input id="ladoCuadrado" value="" class="w-full p-1 rounded-md focus:outline-none" type="text"
+                            placeholder="Ingrese lado en cm2" autocomplete="off">
+                        <input
+                            class="w-full p-1 rounded-md text-white bg-indigo-700 hover:bg-indigo-600 focus:bg-indigo-900"
+                            type="submit" value="Calcular Área">
+                    </div>
+                </form>
+
+                <div class="mt-4" id="resultadoCuadrado">
+                    <h3 class="text-sm font-bold text-gray-700">Resultado:</h3>
+                    <div id="campoResultadoCuadrado"
+                        class="p-2 bg-green-300 text-xs text-green-700 rounded-sm border border-green-400">
+                    </div>
+                    <div id="campoErrorCuadrado"
+                        class="p-2 bg-red-300 text-xs text-red-700 rounded-sm border border-red-400">
+                    </div>
+                </div>
+            </div>
+
+            <!-- calcular el área de un triangulo Rectángulo -->
+            <div class="bg-gray-200 rounded-md p-4 shadow-2xl border border-gray-300 text-center">
+                <h2 class="text-md font-bold text-gray-700">Calcular Área del Triangulo Rectangulo</h2>
+                <i class="text-2xl text-gray-700 fas fa-triangle"></i>
+
+                <form action="#" id="formTrianguloRectangulo" onsubmit="calcularAreaTrianguloRectangulo()">
+                    <div class="space-y-2 mt-4">
+                        <input id="altoTrianguloRectangulo" value="" class="w-full p-1 rounded-md focus:outline-none" type="text"
+                            placeholder="Ingrese altura en cm2" autocomplete="off">
+                            <input id="baseTrianguloRectangulo" value="" class="w-full p-1 rounded-md focus:outline-none" type="text"
+                            placeholder="Ingrese base en cm2" autocomplete="off">
+                        <input
+                            class="w-full p-1 rounded-md text-white bg-indigo-700 hover:bg-indigo-600 focus:bg-indigo-900"
+                            type="submit" value="Calcular Área">
+                    </div>
+                </form>
+
+                <div class="mt-4" id="resultadoTrianguloRectangulo">
+                    <h3 class="text-sm font-bold text-gray-700">Resultado:</h3>
+                    <div id="campoResultadoTrianguloRectangulo"
+                        class="p-2 bg-green-300 text-xs text-green-700 rounded-sm border border-green-400">
+                    </div>
+                    <div id="campoErrorTrianguloRectangulo"
+                        class="p-2 bg-red-300 text-xs text-red-700 rounded-sm border border-red-400">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
